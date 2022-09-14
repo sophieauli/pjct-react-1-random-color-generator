@@ -19,7 +19,8 @@ function App() {
           backgroundColor: color,
         }}
       >
-        <div> Generated Color: {color} </div>
+        <p>Generated Color: </p>
+        {color}
       </div>
       <button onClick={() => setColor(randomColor())}>Generate</button>
       {/* Controlled component */}
