@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import randomColor from 'randomcolor';
+import { useState } from 'react';
 
 function App() {
+  const [color, setColor] = useState('#00FFFF');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Random Color Generator</h1>
+      <div
+        style={{
+          width: 400,
+          height: 400,
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSiye: 80,
+          backgroundColor: color,
+        }}
+      >
+        <p>Generated Color: </p>
+        {color}
+      </div>
+      <button onClick={() => setColor(randomColor())}>Generate</button>
+      {/* Controlled component */}
+      {/* <input
+        // 2. Use state variable
+        value={emojiName}
+        // 3. Update the state variable
+        onChange={(event) => {
+          setEmojiName(event.currentTarget.value);
+          const chosenEmoji = nodeEmoji.find(event.currentTarget.value).emoji;
+          if (chosenEmoji) {
+            // if emoji exists...
+            setEmoji(chosenEmoji);
+            // then it updates the state
+            console.log();
+          }
+        }} */}
+      {/* /> */}
     </div>
   );
 }
