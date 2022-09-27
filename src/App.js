@@ -22,23 +22,7 @@ function App() {
         Generated Color:
         {color}
       </div>
-      <button onClick={() => setColor(randomColor())}> Generate </button>
-      {/* Controlled component */}
-      {/* <input
-        // 2. Use state variable
-        value={emojiName}
-        // 3. Update the state variable
-        onChange={(event) => {
-          setEmojiName(event.currentTarget.value);
-          const chosenEmoji = nodeEmoji.find(event.currentTarget.value).emoji;
-          if (chosenEmoji) {
-            // if emoji exists...
-            setEmoji(chosenEmoji);
-            // then it updates the state
-            console.log();
-          }
-        }} */}
-      {/* /> */}
+      <button onClick={() => setColor(randomColor())}>Generate</button>
     </div>
   );
 }
