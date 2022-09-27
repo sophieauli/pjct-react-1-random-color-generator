@@ -22,7 +22,7 @@ function App() {
         Generated Color:
         {color}
       </div>
-      <button onClick={() => setColor(randomColor())}>Generate</button>
+      <button onClick={() => setColor(randomColor())}> Generate </button>
       {/* Controlled component */}
       {/* <input
         // 2. Use state variable
